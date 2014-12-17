@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Max7 and NexusUI</title>
+		<script type="text/javascript" src="lib/nexusUI.js"></script>
+		<script>
+		
+
+		// Example to show Integration with Max7
+			
+		nx.onload = function() {
+			
+
+			nx.colorize("accent","#acf");
+			nx.colorize("fill", "#555");
+			nx.colorize("border", "#555");
+			nx.colorize("black", "#fff");
+			document.body.style.backgroundColor = "#aaa"
+
+
+
+			// multislider sends to max via window.max.outlet()
+			multislider1.sendsTo("max");
+			multislider1.setNumberOfSliders(5);
+
+
+
+			// define the name of our dictionary in max
+			var dictName = 'dmess';
+		
+			// Get the latest text from the dictionary and set the message text with it.
+			window.max.getDict(dictName, function(dict) {
+				message1.set({
+					"value": dict.text
+				});
+			})
+				
+
+			// Clicking on the message will get the latest dict text...
+			message1.sendsTo("js");
+			message1.on('*',function(data) {
+				window.max.getDict(dictName, function(dict) {
+					message1.set({
+						"value": dict.text
+					});
+				})
+			})
+			
+
+			// message1's text is 
+			joints1.sendsTo("js");	
+			joints1.on('*',function(data) {
+				window.max.setDict("djoints", data);
+			})
+			
+		}
+
+		
+		window.max.bindInlet("testIt", function(){
+			window.max.outlet("Hi");
+		});
+		
+		
+		
+	</script>
+	
+</head>
+<body>
+
+	<canvas nx="multislider" style="width:100px;height:75px;">Button</canvas>
+	<canvas nx="message" style="width:150px;height:75px;"></canvas>
+	<canvas nx="joints" style="width:200px;height:200px;"></canvas>
+
+</body>
+</html>
