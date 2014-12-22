@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 41.0, 109.0, 843.0, 653.0 ],
+		"rect" : [ 84.0, 100.0, 843.0, 653.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,46 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontface" : 1,
+					"id" : "obj-15",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 652.0, 380.0, 162.0, 20.0 ],
+					"style" : "",
+					"text" : "open to see joints data"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 20.0,
+					"id" : "obj-11",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 646.0, 281.5, 247.0, 29.0 ],
+					"style" : "",
+					"text" : "dmess"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"id" : "obj-9",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 140.0, 416.0, 306.0, 20.0 ],
+					"style" : "",
+					"text" : "<< turns all strings into OSC-compatible messages"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-8",
@@ -110,7 +150,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 424.0, 34.0, 22.0 ],
+					"patching_rect" : [ 20.0, 416.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "print"
 				}
@@ -288,7 +328,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 65.0, 451.0, 73.0, 22.0 ],
+					"patching_rect" : [ 65.0, 416.0, 73.0, 22.0 ],
 					"style" : "",
 					"text" : "fromsymbol"
 				}
@@ -327,7 +367,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 65.0, 420.0, 135.0, 22.0 ],
+					"patching_rect" : [ 65.0, 451.0, 135.0, 22.0 ],
 					"style" : "",
 					"text" : "OSC-route /multislider1"
 				}
@@ -457,7 +497,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 132.0, 118.0, 730.0, 463.0 ],
 					"rendermode" : 0,
-					"url" : "file:///Library/WebServer/Documents/new-nx/nx-max7/Max7/interface.html"
+					"url" : "file:///Library/WebServer/Documents/new-nx/nx-max7/interface.html"
 				}
 
 			}
@@ -527,7 +567,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-52", 0 ],
+					"destination" : [ "obj-36", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-29", 0 ]
@@ -536,7 +576,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-29", 0 ],
+					"destination" : [ "obj-52", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-3", 0 ]
@@ -608,7 +648,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-36", 0 ],
+					"destination" : [ "obj-29", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-52", 0 ]
